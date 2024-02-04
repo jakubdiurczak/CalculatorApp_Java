@@ -106,7 +106,9 @@ public class Source extends JPanel implements ActionListener {
                 }
             }
             if(valueFromButton.equals(",")){
-                textDisplay.setText(getFromDisplay + ".");
+                if(!getFromDisplay.contains(".")) {
+                    textDisplay.setText(getFromDisplay + ".");
+                }
             }
             if(valueFromButton.equals("R")){
                 float valueRotate = (-1) * Float.parseFloat(getFromDisplay);
